@@ -71,8 +71,7 @@ body {
     width: 50%;
 }
 
-.links a {
-    text-decoration: none;
+.links h1 {
     color: gray;
     font-size: 17px;
     font-weight: 500;
@@ -84,13 +83,13 @@ body {
     color: blue;
 }
 
-.links a:hover {
+.links h1:hover {
     color: darkblue;
     text-decoration: none;
     border-bottom: 1px solid darkblue; /* Add underline effect */
 }
 
-.links a::after {
+.links h1::after {
     content: '';
     display: block;
     width: 100%;
@@ -104,7 +103,7 @@ body {
     transform: scaleX(0); /* Initial state: invisible */
 }
 
-.links a:hover::after {
+.links h1:hover::after {
     transform-origin: bottom left; /* Change transform origin on hover */
     transform: scaleX(1); /* Final state: visible */
 }
@@ -191,22 +190,122 @@ body {
     height: 500px;
 }
 
+.moving-image {
+    position: relative;
+    animation: moveImage 5s linear infinite; /* Adjust the duration and timing function as needed */
+}
+
 #section2 {
     display: flex;
     flex-direction: column; /* Added to make content flex in a column */
     align-items: center;
     justify-content: center;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
-#section2 .sub-content {
+#section2 .top {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    width: 90%;
-    height: 95%;
+    height: 100px;
+    width: 100%;
+    margin: auto;
+}
+
+#section2 h1 {
+    color: hsl(0 0% 100% / 0.2);
+    background-clip: text;
+    background-image: linear-gradient(90deg, red, blue);
+    animation: fadeIn 1s ease-in-out forwards;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+#section2 h2 {
+    color: gray;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+#section2 .content {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 90px;
+    width: 100%;
+    height: 93%;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
 }
 
+.content .frontend {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 35%;
+    height: 65%;
+    border: 3px solid gray;
+    border-radius: 15px;
+}
+
+.frontend .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 87%;
+    height: 40%;
+}
+
+.row .languages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 50%;
+    width: 25%;
+}
+
+
+.content .backend {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 35%;
+    height: 65%;
+    border: 3px solid gray;
+    border-radius: 15px;
+}
+
+.backend .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 87%;
+    height: 40%;
+}
+
+.row .languages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 50%;
+    width: 25%;
+}
+
+.content .frontend,
+.content .backend {
+    transition: transform 1s ease-in-out;
+}
+
+.slideInFromLeft {
+    transform: translateX(10%);
+}
+
+.slideInFromRight {
+    transform: translateX(-5%);
+}
 
 
 #section3 {
@@ -248,21 +347,43 @@ body {
     }
 }
 
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 .navigation,
 .content {
     animation: fadeIn 1s ease-in-out; 
 }
 
+@keyframes moveImage {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(50px); /* Adjust the distance the image moves */
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 
-.scroll-reveal {
-    opacity: 1 !important;
-    transform: translateX(0) !important;
-  }
-  
-  .scroll-animation {
-    opacity: 0.2;
-    transform: translateY(12px);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-  }
   
