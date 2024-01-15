@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <!-- About me-->
@@ -22,7 +23,7 @@
                     <h1 id="home">Home</h1>
                     <h1 id="skill">Skill</h1>
                     <h1 id="portfolio">Projects</h1>
-                    <h1 id="contact">Contact</h1>
+                    <h1 id="testimonials">Testimonials</h1>
                 </div>
             </div>
             <!-- Content -->
@@ -30,35 +31,35 @@
                 <!-- Left -->
                 <div class="left">
                     <div>
-                        <h2>Hey There,</h2>
-                        <h1>I am<span class="name">Paul</span>.</h1>
+                        <h2 class="welcome-top">Hey There,</h2>
+                        <h1 class="welcome">I am<span class="name">Paul</span>.</h1>
                         <h3>Welcome to my site! I am an Web Developer who willing to work with you to make your idea brilliant</h3>
                     </div>
                     
                     <div>
-                        <button>Hire Me</button>
+                        <a href="https://www.linkedin.com/in/sales-paul-029452289/"><button>Contact Me</button></a>
                     </div>
 
-                    <div class="social">
+                    <!-- <div class="social">
                         <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+                            <!-- </svg>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 128 128"><path fill="#0076b2" d="M116 3H12a8.91 8.91 0 0 0-9 8.8v104.42a8.91 8.91 0 0 0 9 8.78h104a8.93 8.93 0 0 0 9-8.81V11.77A8.93 8.93 0 0 0 116 3"/><path fill="#fff" d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 1 1-10.5 10.49a10.5 10.5 0 0 1 10.5-10.49m20.41 29h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z"/>
                             </svg>
                         </div>
                         <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 128 128"><path fill="#0076b2" d="M116 3H12a8.91 8.91 0 0 0-9 8.8v104.42a8.91 8.91 0 0 0 9 8.78h104a8.93 8.93 0 0 0 9-8.81V11.77A8.93 8.93 0 0 0 116 3"/><path fill="#fff" d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 1 1-10.5 10.49a10.5 10.5 0 0 1 10.5-10.49m20.41 29h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 193"><path fill="#4285F4" d="M58.182 192.05V93.14L27.507 65.077L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455z"/><path fill="#34A853" d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837l-27.026 25.798z"/><path fill="#EA4335" d="m58.182 93.14l-4.174-38.647l4.174-36.989L128 69.868l69.818-52.364l4.669 34.992l-4.669 40.644L128 145.504z"/><path fill="#FBBC04" d="M197.818 17.504V93.14L256 49.504V26.231c0-21.585-24.64-33.89-41.89-20.945z"/><path fill="#C5221F" d="m0 49.504l26.759 20.07L58.182 93.14V17.504L41.89 5.286C24.61-7.66 0 4.646 0 26.23z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 256 193"><path fill="#4285F4" d="M58.182 192.05V93.14L27.507 65.077L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455z"/><path fill="#34A853" d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837l-27.026 25.798z"/><path fill="#EA4335" d="m58.182 93.14l-4.174-38.647l4.174-36.989L128 69.868l69.818-52.364l4.669 34.992l-4.669 40.644L128 145.504z"/><path fill="#FBBC04" d="M197.818 17.504V93.14L256 49.504V26.231c0-21.585-24.64-33.89-41.89-20.945z"/><path fill="#C5221F" d="m0 49.504l26.759 20.07L58.182 93.14V17.504L41.89 5.286C24.61-7.66 0 4.646 0 26.23z"/></svg>
                         </div>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 128 128"><rect width="118.35" height="118.35" x="4.83" y="4.83" fill="#3d5a98" rx="6.53" ry="6.53"/><path fill="#fff" d="M86.48 123.17V77.34h15.38l2.3-17.86H86.48v-11.4c0-5.17 1.44-8.7 8.85-8.7h9.46v-16A126.56 126.56 0 0 0 91 22.7c-13.62 0-23 8.3-23 23.61v13.17H52.62v17.86H68v45.83z"/></svg>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- Right -->
                 <div class="right moving-image">
-                    <img src="images/try.png" alt="">
+                    <img class="image" src="images/try.png" alt="">
                 </div>
             </div>
         </div>
@@ -67,7 +68,7 @@
     <!-- Skills -->
     <div class="section scroll-animation" id="section2">
         <!-- Add content for section 2 here -->
-        <div class="top">
+        <div class="tech-stack">
             <h1>Languages-Frameworks-Tools</h1>
             <h2>Here is my technology stack after 5 years of programming experience.</h2>
         </div>
@@ -171,11 +172,60 @@
     </div>
 
     <div class="section" id="section3">
-        
+        <h1 class="projects">Projects</h1>
+        <h2 class="mess">Discover my diverse portfolio showcasing web design, branding, and innovative app development projects. Let's connect!</h2>
+        <div class="content">
+            <div class="top">
+                <div class="container1">
+                    <img src="images/project.png" alt="">
+                </div>
+                <div class="container2">
+                    <img src="images/project2.png" alt="">
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="container3">
+                    <img src="images/tabtab.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="section4">
+        <div class="content">
+            <h1 class="testimonials">Testimonials</h1>
+            <p class="fake">"Working with Paul was a game-changer for our team. Their dedication, creativity, and problem-solving skills elevated our projects to new heights. A true asset!"</p>
+            <p class="pm"><span class="manager">Ai Escobr</span>, Former Project Manager at WeSolution</p>
+            <img class="profile" src="images/ai.jpg" alt="">
+        </div>
     </div>
 
 
     <script src="index.js"></script>
-    
+
+    <script>
+        ScrollReveal({ 
+            reset: true,
+            distance: '30px',
+            duration: 2500,
+            delay: 400 
+        });
+
+        ScrollReveal().reveal('.welcome-top', { delay: 500 });
+        ScrollReveal().reveal('.welcome', { delay: 800 });
+        ScrollReveal().reveal('.image', { delay: 500, origin: 'right' });
+        ScrollReveal().reveal('.tech-stack', { delay: 500});
+        ScrollReveal().reveal('.frontend', { delay: 500, origin: 'left' });
+        ScrollReveal().reveal('.backend', { delay: 500, origin: 'right' });
+        ScrollReveal().reveal('.projects', { delay: 500, origin: 'left' });
+        ScrollReveal().reveal('.mess', { delay: 500, origin: 'right' });
+        ScrollReveal().reveal('.container1', { delay: 500, origin: 'left' });
+        ScrollReveal().reveal('.container2', { delay: 500, origin: 'right' });
+        ScrollReveal().reveal('.container3', { delay: 500, origin: 'bottom' });
+        ScrollReveal().reveal('.testimonials', { delay: 500, origin: 'left' });
+        ScrollReveal().reveal('.fake', { delay: 600, origin: 'right' });
+        ScrollReveal().reveal('.pm', { delay: 700, origin: 'left' });
+        ScrollReveal().reveal('.profile', { delay: 800, origin: 'bottom' });        
+    </script>
 </body>
 </html>
